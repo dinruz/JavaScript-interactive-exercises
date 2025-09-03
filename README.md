@@ -54,9 +54,10 @@ Then, simply open the corresponding .html file in your web browser.
 ## DOM Manipulation exercises 🧩
 
 
-| No. | Exercise Name          | Status      | Solution - code      | View demo |
+| No. | Exercise Name          | Status      | View code      | View demo |
 | :-- | :--------------------- | :---------- | :------------------ |:------------|
-| 1   | [Create and Append Elements](#ex-1)|   ✔️   | [Solution](/dom-manipulation/01-create-and-append-elements.js) | [Demo](/dom-manipulation/01-create-and-append-elements.html) |
+| 1   | [Create and Append Elements](#ex-1)|   ✔️   | [Code](/dom-manipulation/01-create-and-append-elements.js) | [Demo](/dom-manipulation/01-create-and-append-elements.html) |
+| 2   | [Append and Style Elements](#ex-2)|   ✔️   | [Code](/dom-manipulation/02-append-and-style.js) | [Demo](/dom-manipulation/02-append-and-style.html) |
 
 
 <details id="ex-1">
@@ -92,13 +93,60 @@ Add the following elements to the container using ONLY JavaScript and the DOM me
 
 ✔️ **Solution:** 
 * [View Code](./dom-manipulation/01-create-and-append-elements.js)
-* [Live Demo](./dom-manipulation/01-create-and-append-elements.html)
+* [View Demo](./dom-manipulation/01-create-and-append-elements.html)
     
 
 
 </details>
 
 ---
+
+<details id="ex-2">
+  <summary><strong>Exercise 2: Append and Style Elements </strong></summary>
+
+Copy the example below, supply the rest of the HTML skeleton and link your JavaScript file.
+
+```html
+<body>
+  <h1>DOM Manipulation</h1>
+  <div id="container">
+    <div class="initial-content">This is the starting point.</div>
+  </div>
+</body>
+```
+**Tasks:**
+  
+  1. Get the `<div>` with the id "container".  
+
+  2. Create a new `<p>` element with the text "This text is light green." and set its color to 'lightgreen'.
+
+  3. Create a new `<h2>` element with the text "This is an orange heading." and set its color to 'orange'.
+
+  4. Create a new `<div>` element. Give it a '2px solid black' border and a 'lightblue' background color.
+  
+  5. Inside this new `<div>` create:
+
+  - a new `<h4>` element with the text "I'm the first element in the new div."
+
+  - a new `<p>` element with the text "And I'm the second!"
+  
+  6. Append all the newly created elements to the "container" div in the correct order.
+
+✔️ **Solution:** 
+* [View Code](./dom-manipulation/02-append-and-style.js)
+* [View Demo](./dom-manipulation/02-append-and-style.html)
+    
+</details>
+
+
+
+
+
+
+
+
+---
+
 
 ## Resources 📚
 
