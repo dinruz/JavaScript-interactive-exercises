@@ -58,6 +58,7 @@ Then, simply open the corresponding .html file in your web browser.
 | :-- | :--------------------- | :---------- | :------------------ |:------------|
 | 1   | [Create and Append Elements](#ex-1)|   ✔️   | [Code](/dom-manipulation/01-create-and-append-elements.js) | [Demo](/dom-manipulation/01-create-and-append-elements.html) |
 | 2   | [Append and Style Elements](#ex-2)|   ✔️   | [Code](/dom-manipulation/02-append-and-style.js) | [Demo](/dom-manipulation/02-append-and-style.html) |
+| 3   | [ Insert and Style Elements](#ex-3)|   ✔️   | [Code](/dom-manipulation/03-insert-and-style.js) | [Demo](/dom-manipulation/03-insert-and-style.html) |
 
 
 <details id="ex-1">
@@ -138,15 +139,50 @@ Copy the example below, supply the rest of the HTML skeleton and link your JavaS
     
 </details>
 
-
-
-
-
-
-
-
 ---
 
+<details id="ex-3">
+  <summary><strong>Exercise 3: Insert and Style Elements </strong></summary>
+
+Start with a basic HTML structure:
+
+```html
+<body>
+  <h1>Insert & Style</h1>
+  <div id="container">
+    <p class="intro">This is a starting paragraph. Add new content before and after me!</p>
+  </div>
+</body>
+```
+**Tasks:**
+  
+  1. Get the '#container div'.
+
+  2. Create a new `<span>` element. Give it a class of highlight and the text "IMPORTANT: ". Add this `<span>` at the very beginning of the #container div, before the existing `<p class="intro">` element.
+
+  3. Create a new `<div>` element. Give it an ID of 'info-box' and a red border.
+
+  4. Inside the new info-box div, create a new `<h2>` element with the text "New Section" and a class of 'section-title'.
+
+  5. Inside the new 'info-box div', create a new `<ul>` element with two list items (`<li>`):
+
+  * The first `<li>` should say "First item".
+
+  * The second `<li>` should say "Second item".
+
+  6. Append 'the info-box div' to the '#container div' after the existing `<p class="intro">` element.
+
+  7. Create another new `<p>` element. Give it the text "This is the final paragraph." and an ID of 'final-paragraph'.
+
+  8. Append the #final-paragraph to the `<body>` element.
+
+💡 **Hint:** For inserting the `<span>` element before the `<p class="intro">`, you'll want to use the `insertBefore()` method. 
+
+✔️ **Solution:** 
+* [View Code](./dom-manipulation/03-insert-and-style.js)
+* [View Demo](./dom-manipulation/03-insert-and-style.html)
+
+---
 
 ## Resources 📚
 
