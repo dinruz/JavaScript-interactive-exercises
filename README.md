@@ -60,6 +60,7 @@ Then, simply open the corresponding .html file in your web browser.
 | 2   | [Append and Style Elements](#ex-2)|   ✔️   |[02-HTML](/dom-manipulation/02-append-and-style.html) |[02-JS](/dom-manipulation/02-append-and-style.js) |  |
 | 3   | [Insert and Style Elements](#ex-3)|   ✔️   | [03-HTML](/dom-manipulation/03-insert-and-style.html)|[03-JS](/dom-manipulation/03-insert-and-style.js) |  
 | 4   | [List Manipulation & Styling](#ex-4)|   ✔️   | [04-HTML](/dom-manipulation/04-list-manipulation-style.html)|[04-JS](/dom-manipulation/04-list-manipulation-style.js) |  
+| 5   | [Interactive FAQ Section](#ex-5)|   ✔️   | [05-HTML](/dom-manipulation/05-faq-section.html)|[05-JS](/dom-manipulation/05-faq-section.js) |  
 
 
 <details id="ex-1">
@@ -241,6 +242,73 @@ You will build on an existing HTML structure to dynamically add new list items, 
 ✔️ **Solution:** 
 * [04 - HTML Code](./dom-manipulation/04-list-manipulation-style.html)
 * [04 - JS Code](./dom-manipulation/04-list-manipulation-style.js)
+
+</details>
+
+---
+
+<details id="ex-5">
+  <summary><strong>Exercise 5: Interactive FAQ Section</strong></summary>
+
+In this exercise, you will dynamically create and append new elements to build a simple Frequently Asked Questions (FAQ) section. 
+
+You'll start with an empty HTML structure:
+
+```html
+<body>
+  <div id="faq-container">
+    </div>
+</body>
+```
+
+**Tasks:**
+
+**1.** Get the Container:
+
+  * Get a reference to the `<div>` element with the ID 'faq-container'.
+
+**2.** Create and Style the Main Heading:
+
+  * Create an `<h2>` element.
+
+  * Give it the text content "Frequently Asked Questions".
+
+  * Add a class named 'faq-heading' to this element.
+
+  * Append it to the 'faq-container'.
+
+**3.** Create and Style the First Question:
+
+  * Create an `<h3>` element with the text "What is DOM Manipulation?".
+
+  * Add a class named 'question' to it.
+
+  * Append this `<h3>` to the 'faq-container'.
+
+**4.** Create and Style the First Answer:
+
+  * Create a `<p>` element.
+
+  * Give it the text content "DOM stands for Document Object Model. It is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content."
+
+  * Add a class named 'answer' to this `<p>` element.
+
+  * Append it to the 'faq-container'.
+
+**5.** Create and Style the Second Question and Answer:
+
+  * Using the same methods as above, create another `<h3>` and `<p>` for a second question and answer.
+
+  * The question should be: "Why is it important?".
+
+  * The answer should be: "DOM manipulation allows web developers to create dynamic and interactive web pages without needing to reload the page. This is the foundation of modern web applications."
+
+  * Append both elements to the 'faq-container' in the correct order.
+
+
+✔️ **Solution:** 
+* [05 - HTML Code](./dom-manipulation/04-list-manipulation-style.html)
+* [05 - JS Code](./dom-manipulation/04-list-manipulation-style.js)
 
 </details>
 
