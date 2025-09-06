@@ -54,11 +54,12 @@ Then, simply open the corresponding .html file in your web browser.
 ## DOM Manipulation exercises 🧩
 
 
-| No. | Exercise Name          | Status      | View code      | View demo |
+| No. | Exercise Name          | Status      | HTML Code      | JS Code |
 | :-- | :--------------------- | :---------- | :------------------ |:------------|
-| 1   | [Create and Append Elements](#ex-1)|   ✔️   | [Code](/dom-manipulation/01-create-and-append-elements.js) | [Demo](/dom-manipulation/01-create-and-append-elements.html) |
-| 2   | [Append and Style Elements](#ex-2)|   ✔️   | [Code](/dom-manipulation/02-append-and-style.js) | [Demo](/dom-manipulation/02-append-and-style.html) |
-| 3   | [ Insert and Style Elements](#ex-3)|   ✔️   | [Code](/dom-manipulation/03-insert-and-style.js) | [Demo](/dom-manipulation/03-insert-and-style.html) |
+| 1   | [Create and Append Elements](#ex-1)|   ✔️   | [01-HTML](/dom-manipulation/01-create-and-append-elements.html) | [01-JS](/dom-manipulation/01-create-and-append-elements.js) |  
+| 2   | [Append and Style Elements](#ex-2)|   ✔️   |[02-HTML](/dom-manipulation/02-append-and-style.html) |[02-JS](/dom-manipulation/02-append-and-style.js) |  |
+| 3   | [Insert and Style Elements](#ex-3)|   ✔️   | [03-HTML](/dom-manipulation/03-insert-and-style.html)|[03-JS](/dom-manipulation/03-insert-and-style.js) |  
+| 4   | [List Manipulation & Styling](#ex-4)|   ✔️   | [04-HTML](/dom-manipulation/04-list-manipulation-style.html)|[04-JS](/dom-manipulation/04-list-manipulation-style.js) |  
 
 
 <details id="ex-1">
@@ -93,10 +94,8 @@ Add the following elements to the container using ONLY JavaScript and the DOM me
 🔗 **Source:** [The Odin Project: DOM Manipulation and Events](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events) | Foundations Course
 
 ✔️ **Solution:** 
-* [View Code](./dom-manipulation/01-create-and-append-elements.js)
-* [View Demo](./dom-manipulation/01-create-and-append-elements.html)
-    
-
+* [01 - HTML Code](./dom-manipulation/01-create-and-append-elements.html)
+* [01 - JS Code](./dom-manipulation/01-create-and-append-elements.js)
 
 </details>
 
@@ -134,8 +133,9 @@ Copy the example below, supply the rest of the HTML skeleton and link your JavaS
   6. Append all the newly created elements to the "container" div in the correct order.
 
 ✔️ **Solution:** 
-* [View Code](./dom-manipulation/02-append-and-style.js)
-* [View Demo](./dom-manipulation/02-append-and-style.html)
+* [02 - HTML Code](./dom-manipulation/02-append-and-style.html)
+* [02 - JS Code](./dom-manipulation/02-append-and-style.js)
+
     
 </details>
 
@@ -179,8 +179,70 @@ Start with a basic HTML structure:
 💡 **Hint:** For inserting the `<span>` element before the `<p class="intro">`, you'll want to use the `insertBefore()` method. 
 
 ✔️ **Solution:** 
-* [View Code](./dom-manipulation/03-insert-and-style.js)
-* [View Demo](./dom-manipulation/03-insert-and-style.html)
+* [03 - HTML Code](./dom-manipulation/03-insert-and-style.html)
+* [03 - JS Code](./dom-manipulation/03-insert-and-style.js)
+</details>
+
+---
+
+<details id="ex-4">
+  <summary><strong>Exercise 4: List Manipulation & Styling </strong></summary>
+
+You will build on an existing HTML structure to dynamically add new list items, style them based on their position and insert new content before and after a specific element. 
+
+```html
+<body>
+  <h1>Interactive Shopping List</h1>
+  <div id="shopping-list-container">
+    <h2>Items to Buy</h2>
+    <ul id="item-list">
+      <li class="item">Milk</li>
+      <li class="item highlight">Bread</li>
+      <li class="item">Eggs</li>
+    </ul>
+  </div>
+</body>
+```
+
+**Tasks:**
+
+1. Get the Elements:
+
+    * Select the `<ul>` element with the ID item-list.
+
+    * Select the `<li>` element that has the class highlight.
+
+2. Add and Style a New Item:
+
+    * Create a new `<li>` element with the text "Cheese".
+
+    * Add a class named new-item to this new element.
+
+    * Append this new list item to the end of the item-list.
+
+3. Insert an Item at the Beginning:
+
+    * Create another new `<li>` element with the text "Apples".
+
+    * Insert this new `<li>` element at the beginning of the item-list.
+
+4. Add a Section Header:
+
+    * Create a new `<h3>` element with the text "Don't Forget!"
+
+    * Insert this new `<h3>` element directly before the item-list `<ul>` element.
+
+5. Remove a Class and Add a New Style:
+
+    * Remove the highlight class from the `<li>` element that currently has it.
+
+    * Instead of a class, use inline styling to set the background color of this element to 'pink'.
+
+✔️ **Solution:** 
+* [04 - HTML Code](./dom-manipulation/04-list-manipulation-style.html)
+* [04 - JS Code](./dom-manipulation/04-list-manipulation-style.js)
+
+</details>
 
 ---
 
