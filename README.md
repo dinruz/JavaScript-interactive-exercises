@@ -72,9 +72,9 @@ Then, simply open the corresponding .html file in your web browser.
 
 | No. | Exercise Name          | Status      | HTML Code      | JS Code |
 | :-- | :--------------------- | :---------- | :------------------ |:------------|
-| 7   | [Inline Event Handler](#ex-7)|   ✔️   | [07-HTML](/event-listeners/07-inline-handler.html) | - |  
-| 8  | [Traditional Event Handler](#ex-8)|   ✔️   | [08-HTML](/event-listeners/08-traditional-handler.html) | [08-JS](/event-listeners/08-traditional-handler.js)|  
-
+| 7   | [I - Inline Event Handler](#ex-7)|   ✔️   | [07-HTML](/event-listeners/07-inline-handler.html) | - |  
+| 8  | [II - Traditional Event Handler](#ex-8)|   ✔️   | [08-HTML](/event-listeners/08-traditional-handler.html) | [08-JS](/event-listeners/08-traditional-handler.js)|  
+| 9 | [III - Modern Event Handler](#ex-9)|   ✔️   | [09-HTML](/event-listeners/09-modern-handler.html) | [09-JS](/event-listeners/09-modern-handler.js)|  
 
 ##  Exercises Details and Instructions 
 
@@ -443,6 +443,44 @@ Connect your HTML and JavaScript files and use the onclick property to set the b
 ✔️ **Solution:** 
 * [08 - HTML Code](./event-listeners/08-traditional-handler.html)
 * [08 - JS Code](./event-listeners/08-traditional-handler.js)
+
+</details>
+
+---
+<details id="ex-9">
+<summary><strong>Exercise 9: Modern Event Listener</strong></summary>
+
+Use the `addEventListener()` method, which is the most flexible and recommended approach.
+Create .html and .js files, linked in the same way as in the previous exercise.
+
+**Initial HTML code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 9: Method III - 'addEventListener'</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+</body>
+</html>
+```
+
+**Tasks:**
+
+1. In .js file, get a reference to the button and use the `addEventListener()` method on the button.
+
+2. Pass 'click' as the first argument.
+
+3. Pass a function that displays an alert with the message 'Hello from Method 3!' as the second argument.
+
+4. Save both files and test your button.
+
+✔️ **Solution:** 
+* [09 - HTML Code](./event-listeners/09-modern-handler.html)
+* [09 - JS Code](./event-listeners/09-modern-handler.js)
 
 </details>
 
