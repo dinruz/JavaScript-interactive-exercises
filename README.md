@@ -1,11 +1,13 @@
 # JavaScript Exercises: Mastering interactive JS (Fundamentals)
 
-
-## Table of Contents 
+## Table of Contents 📖
 
 - [Overview](#overview)
 - [Installation & Usage](#installation--usage)
-- [DOM Manipulation exercises](#dom-manipulation-exercises-)
+- [List of Exercises](#list-of-exercises-)
+  - [DOM Manipulation Exercises](#dom-manipulation-exercises)
+  - [Event Listeners Exercises](#event-listeners-exercises)
+- [Exercises Details and Instructions](#exercises-details-and-instructions)
 - [Resources](#resources-)
 
 ---
@@ -15,18 +17,17 @@
 This repository contains my solutions to various exercises for mastering interactive JavaScript. All solutions are the result of self-study and learning.
 
 Exercises are focused on fundamental concepts such as:
-
 *  **DOM Manipulations** 
-*  **Event listeners**.
+*  **Event Listeners**
 
 This repository is a work in progress, with new exercises to be added frequently.
 
 
 ---
 
-## Installation & Usage
+## Installation & Usage 
 
-**1.**  **Fork the repository**
+**1.**  **Fork the repository** 
 
 Begin by forking this repository to your own GitHub account. 
 Click the 'Fork' button on the top right of this page.
@@ -51,7 +52,9 @@ Then, simply open the corresponding .html file in your web browser.
 
 ---
 
-## DOM Manipulation exercises 🧩
+## List of Exercises 🧩
+
+### DOM Manipulation exercises 
 
 
 | No. | Exercise Name          | Status      | HTML Code      | JS Code |
@@ -61,6 +64,19 @@ Then, simply open the corresponding .html file in your web browser.
 | 3   | [Insert and Style Elements](#ex-3)|   ✔️   | [03-HTML](/dom-manipulation/03-insert-and-style.html)|[03-JS](/dom-manipulation/03-insert-and-style.js) |  
 | 4   | [List Manipulation & Styling](#ex-4)|   ✔️   | [04-HTML](/dom-manipulation/04-list-manipulation-style.html)|[04-JS](/dom-manipulation/04-list-manipulation-style.js) |  
 | 5   | [Interactive FAQ Section](#ex-5)|   ✔️   | [05-HTML](/dom-manipulation/05-faq-section.html)|[05-JS](/dom-manipulation/05-faq-section.js) |  
+| 6   | [Profile Card](#ex-6)|   ✔️   | [06-HTML](/dom-manipulation/06-profile-card.html)|[06-JS](/dom-manipulation/06-profile-card.js) |  
+
+
+### Event Listeners exercises 
+
+
+| No. | Exercise Name          | Status      | HTML Code      | JS Code |
+| :-- | :--------------------- | :---------- | :------------------ |:------------|
+| 7   | [Inline Event Handler](#ex-7)|   ✔️   | [07-HTML](/event-listeners/07-inline-handler.html) | - |  
+| 8  | [Traditional Event Handler](#ex-8)|   ✔️   | [08-HTML](/event-listeners/08-traditional-handler.html) | [08-JS](/event-listeners/08-traditional-handler.js)|  
+
+
+##  Exercises Details and Instructions 
 
 
 <details id="ex-1">
@@ -87,7 +103,6 @@ Add the following elements to the container using ONLY JavaScript and the DOM me
 3. a `<div>` with a black border and pink background color with the following elements inside of it:
  *  another `<h1>` that says “I’m in a div”
  *  a `<p>` that says “ME TOO!”
-
 
 
 💡  **Hint:**  After creating the `<div>` with createElement, append the `<h1>` and `<p>` to it before adding it to the container.
@@ -309,6 +324,125 @@ You'll start with an empty HTML structure:
 ✔️ **Solution:** 
 * [05 - HTML Code](./dom-manipulation/04-list-manipulation-style.html)
 * [05 - JS Code](./dom-manipulation/04-list-manipulation-style.js)
+
+</details>
+
+---
+
+<details id="ex-6">
+  <summary><strong>Exercise 6: Profile Card </strong></summary>
+
+The goal is to create and style a complete profile card using all DOM manipulation skills.The task simulates loading user data, but instead of running on a click, the JavaScript executes as soon as the page loads. You'll begin with an empty `<body>` tag. You'll add all content using JavaScript.
+
+```html
+<body>
+</body>
+```
+
+**Tasks:**
+
+1. Get the Body Element:
+
+    * Get a reference to the `<body>` tag.
+
+2. Create the Profile Card:
+
+    * Create a div element. Give it the id "profile-card". Append it to the `<body>`.
+
+3. Create the Profile Picture:
+
+    * Create an img element. Set its src attribute to "06-profile-card-avatar.png". Set its alt attribute to "Profile Picture". Give it the id "profile-pic". Append it to the "profile-card" div.
+
+4. Create the Name and Status:
+
+    * Create an h2 element. Set its textContent to "John Doe". Give it the id "profile-name". Append it to the "profile-card" div.
+
+    * Create a p element. Set its textContent to "Online". Give it the id "profile-status". Append it to the "profile-card" div.
+
+5. Add Classes and Styles:
+
+    * Add the class "online-status" to the `<p>` element.
+
+    * Set the backgroundColor of the `<p>` element to 'lightgreen' using an inline style.
+
+6. Create the Button:
+
+    *  Create a button element. Set its textContent to "Send Message". Give it the id "message-button". Append it to the "profile-card" div.
+
+✔️ **Solution:** 
+* [06 - HTML Code](./dom-manipulation/06-profile-card.html)
+* [06 - JS Code](./dom-manipulation/06-profile-card.js)
+
+</details>
+
+---
+
+<details id="ex-7">
+  <summary><strong>Exercise 7: Inline Event Handler</strong></summary>
+
+Create a button that displays a message directly from its HTML code.
+Begin with a basic HTML file. You'll add the button directly into the `<body>` tag.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7: Method 1</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+**Tasks**:
+
+1. Add a `<button>` element inside the `<body>` tag. Add the text "Click Me!" inside the button tags.
+
+2. Set its onclick attribute to alert ('Hello from Method 1!').
+
+3. Save the file and open it in your browser to test it.
+
+✔️ **Solution:** 
+* [07 - HTML Code](./event-listeners/07-inline-handler.html)
+
+</details>
+
+---
+
+<details id="ex-8">
+<summary><strong>Exercise 8: Traditional Event Handler</strong></summary>
+
+Connect your HTML and JavaScript files and use the onclick property to set the button's functionality. 
+
+**Initial HTML code**:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8: Method II</title>
+</head>
+<body>
+    <button id="btn">Click Me!</button>
+</body>
+</html>
+```
+
+**Tasks:**
+
+1. In .js file, get a reference to the button element using `document.querySelector()`.
+
+2. Set the onclick property of the button to a function that displays an alert with the message 'Hello from Method 2!'.
+
+3. Save both files and test your button in the browser.
+
+✔️ **Solution:** 
+* [08 - HTML Code](./event-listeners/08-traditional-handler.html)
+* [08 - JS Code](./event-listeners/08-traditional-handler.js)
 
 </details>
 
