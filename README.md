@@ -75,6 +75,8 @@ Then, simply open the corresponding .html file in your web browser.
 | 7   | [I - Inline Event Handler](#ex-7)|   ✔️   | [07-HTML](/event-listeners/07-inline-handler.html) | - |  
 | 8  | [II - Traditional Event Handler](#ex-8)|   ✔️   | [08-HTML](/event-listeners/08-traditional-handler.html) | [08-JS](/event-listeners/08-traditional-handler.js)|  
 | 9 | [III - Modern Event Handler](#ex-9)|   ✔️   | [09-HTML](/event-listeners/09-modern-handler.html) | [09-JS](/event-listeners/09-modern-handler.js)|  
+| 10 | [Three Buttons](#ex-10)|   ✔️   | [10-HTML](/event-listeners/10-3-buttons.html) | [10-JS](/event-listeners/10-3-buttons.js)|  
+| 11 | [Styling with Buttons](#ex-11)|   ✔️   | [11-HTML](/event-listeners/11-style-buttons.html) | [10-JS](/event-listeners/11-style-buttons.js)|  
 
 ##  Exercises Details and Instructions 
 
@@ -447,6 +449,7 @@ Connect your HTML and JavaScript files and use the onclick property to set the b
 </details>
 
 ---
+
 <details id="ex-9">
 <summary><strong>Exercise 9: Modern Event Listener</strong></summary>
 
@@ -483,6 +486,130 @@ Create .html and .js files, linked in the same way as in the previous exercise.
 * [09 - JS Code](./event-listeners/09-modern-handler.js)
 
 </details>
+
+---
+
+<details id="ex-10">
+<summary><strong>Exercise 10: Three Buttons</strong></summary>
+
+ Create a single web page with three different buttons, each using a distinct method to handle a "click" event.
+
+**Initial HTML code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10: Mixed Event Handlers</title>
+</head>
+<body>
+    <h1>Event Handler Showcase</h1>
+    <button id="btn1" >Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+
+    <p id="message-display">Messages will appear here!</p>
+</body>
+</html>
+```
+
+**Tasks:**
+
+**1. Button 1 (Inline Event Handler):**
+
+* Modify the HTML file to add an onclick attribute directly to 'btn1'.
+
+* The value of this attribute should be a JavaScript command that updates the text of the `<p>` element (with the ID 'message-display') to "You clicked Button 1 using an inline handler!"
+
+**2. Button 2 (Traditional Event Handler):**
+
+* In your .js file, get a reference to 'btn2' using document.getElementById().
+
+* Set its onclick property to a function that changes the text of the `<p>` element to "You clicked Button 2 using a traditional handler!"
+
+**3. Button 3 (Modern Event Listener):**
+
+* In your .js file, get a reference to btn3.
+
+* Use the `addEventListener()` method on this button. The event type should be 'click', and the function should update the text of the `<p>` element to "You clicked Button 3 using a modern event listener!"
+
+**Testing:** Save both files and open the HTML file in your browser. Verify that clicking each button updates the text of the message display as specified.
+
+✔️ **Solution:** 
+* [10 - HTML Code](./event-listeners/10-3-buttons.html)
+* [10 - JS Code](./event-listeners/10-3-buttons.js)
+
+</details>
+
+---
+
+---
+
+<details id="ex-11">
+<summary><strong>Exercise 11: Style with Buttons</strong></summary>
+
+Create a single web page with three buttons. 
+Each button will use a different JavaScript event handler method to change the background color of the same `<div>` element.
+
+**Initial HTML code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Three-Button Stylist</title>
+    <style>
+        #color-box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change the Color</h1>
+    <button id="btn1">Change to Red</button>
+    <button id="btn2">Change to Blue</button>
+    <button id="btn3">Change to Green</button>
+
+    <div id="color-box"></div>
+
+</body>
+</html>
+```
+
+**Tasks:**
+
+**1. Button 1** (Inline Event Handler):
+
+* Directly in the HTML file, add an onclick attribute to btn1.
+
+* The value of this attribute should be a JavaScript command that finds the div element with id="color-box" and sets its background color style to 'red'.
+
+**2. Button 2** (Traditional Event Handler):
+
+* In your .js file, get a reference to btn2 using `getElementById()`.
+
+* Set its onclick property to a function that finds the #color-box element and changes its background color to 'blue'.
+
+**3. Button 3** (Modern Event Listener):
+
+* In .js file, get a reference to btn3.
+
+* Use the `addEventListener()` method to listen for a 'click' event and run a function that sets the background color of #color-box to 'green'.
+
+✔️ **Solution:** 
+* [11 - HTML Code](./event-listeners/11-style-buttons.html)
+* [11 - JS Code](./event-listeners/11-style-buttons.js)
+
+</details>
+
+
 
 ---
 
