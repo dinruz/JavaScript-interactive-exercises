@@ -76,10 +76,14 @@ Then, simply open the corresponding .html file in your web browser.
 | 8  | [II - Traditional Event Handler](#ex-8)|   ✔️   | [08-HTML](/event-listeners/08-traditional-handler.html) | [08-JS](/event-listeners/08-traditional-handler.js)|  
 | 9 | [III - Modern Event Handler](#ex-9)|   ✔️   | [09-HTML](/event-listeners/09-modern-handler.html) | [09-JS](/event-listeners/09-modern-handler.js)|  
 | 10 | [Three Buttons](#ex-10)|   ✔️   | [10-HTML](/event-listeners/10-3-buttons.html) | [10-JS](/event-listeners/10-3-buttons.js)|  
-| 11 | [Styling with Buttons](#ex-11)|   ✔️   | [11-HTML](/event-listeners/11-style-buttons.html) | [10-JS](/event-listeners/11-style-buttons.js)|  
+| 11 | [Styling with Buttons](#ex-11)|   ✔️   | [11-HTML](/event-listeners/11-style-buttons.html) | [11-JS](/event-listeners/11-style-buttons.js)| 
+ | 12 | [Dynamic Text & Color](#ex-12)|   ✔️   | [12-HTML](/event-listeners/12-dynamic-txt-color.html) | [12-JS](/event-listeners/12-dynamic-txt-color.js)| 
+ | 13 | [Simple Night Mode Toggle](#ex-13)|   ✔️   | [13-HTML](/event-listeners/13-simple-night-mode.html) | [13-JS](/event-listeners/13-simple-night-mode.js)| 
+ | 14 | [3 Methods w/ Named Functions](#ex-14)|   ✔️   | [14-HTML](/event-listeners/14-named-func.html) | [14-JS](/event-listeners/14-named-func.js)| 
+ | 15 | [Event Listener - Anon & Named Function](#ex-15)|   ✔️  | [15-HTML](/event-listeners/15-events-anon-named.html) | [15-JS](/event-listeners/15-events-anon-named.js)| 
+
 
 ##  Exercises Details and Instructions 
-
 
 <details id="ex-1">
   <summary><strong>Exercise 1: Create and Append Elements</strong></summary>
@@ -545,8 +549,6 @@ Create .html and .js files, linked in the same way as in the previous exercise.
 
 ---
 
----
-
 <details id="ex-11">
 <summary><strong>Exercise 11: Style with Buttons</strong></summary>
 
@@ -606,6 +608,251 @@ Each button will use a different JavaScript event handler method to change the b
 ✔️ **Solution:** 
 * [11 - HTML Code](./event-listeners/11-style-buttons.html)
 * [11 - JS Code](./event-listeners/11-style-buttons.js)
+
+</details>
+
+---
+
+<details id="ex-12">
+<summary><strong>Exercise 12: Dynamic Text and Color</strong></summary>
+
+Create a web page with a single button and a `<p>` element. When the button is clicked, it should change the text content of the `<p>` element and also change the text color to red.
+
+**Initial HTML Code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content</title>
+</head>
+<body>
+    <h1>Change Text & Color</h1>
+    <button id="changeBtn">Change It</button>
+    <p id="displayText">The text will change here.</p>
+</body>
+</html>
+```
+
+**Tasks:**
+
+1.  Get a reference to both the button and the paragraph using `document.getElementById()`.
+
+2. Add an Event Listener. 
+
+* Inside the function, update the textContent of the `<p>` element to "You clicked the button!".
+
+* Change Color: Still inside the same function, change the color of the `<p>` element's text to 'red' by directly modifying its style.color property.
+
+✔️ **Solution:** 
+* [12 - HTML Code](./event-listeners/12-.html)
+* [12 - JS Code](./event-listeners/12-.js)
+
+</details>
+
+---
+
+<details id="ex-13">
+<summary><strong>Exercise 13: Simple Night Mode Toggle</strong></summary>
+
+Create a night mode option for website by switching it with night mode button.
+
+**Initial Codes:**
+
+* **HTML Code**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Mode Toggle</title>
+</head>
+<body>
+    <button id="modeBtn">Night Mode: TURN ON 🌙</button>
+    <h1>Welcome to my page</h1>
+    <p>This is a paragraph of text that will change color.</p>
+</body>
+</html>
+```
+
+* **CSS Code**
+```css
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: all 0.5s ease;
+}
+
+.night-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+#modeBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #333;
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.night-mode #modeBtn {
+    background-color: #f1f1f1;
+    color: #333;
+    border-color: #f1f1f1;
+}
+```
+**Tasks:**
+
+1. Get elements reference in JavaScript. Add Event Listener, add a 'click' event listener to the button.
+
+2. Inside the event listener function, use `classList.toggle()` on document.body to add or remove the night-mode class.
+
+3. (*Optional, but useful step*) 
+
+Inside the same function, add logic to check if the night-mode class is active. If it is, change the button's text to "Night Mode: TURN OFF 🌞". If it's not, change it back to "Night Mode: TURN ON🌙".
+
+✔️ **Solution:** 
+* [13 - HTML Code](./event-listeners/13-simple-night-mode.html)
+* [13 - CSS Code](./event-listeners/13-simple-night-mode.css)
+* [13 - JS Code](./event-listeners/13-simple-night-mode.js)
+
+</details>
+
+---
+
+<details id="ex-14">
+<summary><strong>Exercise 14: 3 Methods w/ Named Functions</strong></summary>
+
+This task aims to show three different methods (as exercised above) to run a named function when a button is clicked.
+
+**Initial Code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+</head>
+<body>
+    <h1>Three Methods with Named Functions</h1>
+
+    <div>
+        <button id="btn1">1. `onclick` attribute</button>
+        <p id="message1">Method 1: The text will change.</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <button id="btn2">2. `onclick` property</button>
+        <p id="message2">Method 2: The text will change.</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <button id="btn3">3. `addEventListener()`</button>
+        <p id="message3">Method 3: The text will change.</p>
+    </div>
+</body>
+</html>
+```
+
+
+**Tasks:**
+
+In your .js file, create three named functions. Each function should change the text in its corresponding paragraph. Then, link each function to its button using one of the three methods.
+
+**1. Method 1 (onclick attribute):** Write the function `handleMethod1()`. 
+
+**2. Method 2 (onclick property):** Write the function `handleMethod2().` 
+
+Get the btn2 button and assign the function to its onclick property.
+
+**3. Method 3 (addEventListener):** Write the function `handleMethod3()`. 
+
+Get the btn3 button and add a click event listener that runs this function.
+
+
+✔️ **Solution:** 
+* [14 - HTML Code](./event-listeners/14-named-func.html)
+* [14 - JS Code](./event-listeners/14-named-func.js)
+
+</details>
+
+---
+
+<details id="ex-15">
+<summary><strong>Exercise 15: Event Listener with Anon and Named Function </strong></summary>
+
+This exercise will let you practice two key methods for writing event functions: using a named function and an anonymous function. We'll use two different events: click and dblclick (double-click).
+
+**Initial Code:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <style>
+        #infoBox {
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            margin: 50px auto;
+            border: 2px solid #333;
+            text-align: center;
+            line-height: 1.5;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click or double-click!</h1>
+    <div id="infoBox">
+        <p>Click once to change the text.</p>
+        <p>Click twice to change the background color.</p>
+    </div>
+</body>
+</html>
+```
+**Tasks:**
+
+In your .js file, create the functionality for the div element above.
+
+**1. Named Function**
+
+* Write a named function (e.g., changeText). Inside this function, change the text of the paragraph inside the infoBox to "The text has been changed!".
+
+* Get a reference to the #infoBox.
+
+* Add a click event listener that calls your named function.
+
+**2. Anonymous Function** 
+
+* On the #infoBox, add another event listener, but this time for the dblclick event.
+
+* Instead of calling a named function, write an anonymous function directly inside the event listener.
+
+* Inside this anonymous function, change the background-color of the infoBox element to "lightblue".
+
+✔️ **Solution:** 
+* [15 - HTML Code](./event-listeners/15-events-anon-named.html)
+* [15 - JS Code](./event-listeners/15-events-anon-named.js)
 
 </details>
 
