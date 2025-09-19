@@ -81,6 +81,7 @@ Then, simply open the corresponding .html file in your web browser.
  | 13 | [Simple Night Mode Toggle](#ex-13)|   ✔️   | [13-HTML](/event-listeners/13-simple-night-mode.html) | [13-JS](/event-listeners/13-simple-night-mode.js)| 
  | 14 | [3 Methods w/ Named Functions](#ex-14)|   ✔️   | [14-HTML](/event-listeners/14-named-func.html) | [14-JS](/event-listeners/14-named-func.js)| 
  | 15 | [Event Listener - Anon & Named Function](#ex-15)|   ✔️  | [15-HTML](/event-listeners/15-events-anon-named.html) | [15-JS](/event-listeners/15-events-anon-named.js)| 
+  | 16 | [Interactive card - Hovering](#ex-16)|   ✔️  | [16-HTML](/event-listeners/16-interactive-card.html) | [16-JS](/event-listeners/16-interactive-card.js)| 
 
 
 ##  Exercises Details and Instructions 
@@ -856,7 +857,103 @@ In your .js file, create the functionality for the div element above.
 
 </details>
 
+---
 
+
+<details id="ex-16">
+<summary><strong>Exercise 16: Interactive Card - Hovering</strong></summary>
+
+Create an interactive information "card" that reacts to two different events: 
+* `mouseenter` (when the mouse enters the element's area) 
+* `mouseleave` (when the mouse exits).
+
+**Initial Code:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Info Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+            margin: 0;
+        }
+        #infoCard {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid transparent;
+            padding: 20px;
+        }
+        #infoCard h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        #infoCard p {
+            color: #666;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="infoCard">
+        <h2>Hover me!</h2>
+        <p>Here are some extra details that will appear.</p>
+    </div>
+</body>
+</html>
+```
+
+**Tasks**
+
+ **Step 1: Setup**
+
+* Create a new JavaScript file. Link it to your HTML file. 
+* In your JS file, get a reference to the #infoCard element.
+
+ **Step 2: `mouseenter` Functionality**
+
+ * Write a named function called 'showInfo'. Inside this function, get the `<p>` tag within the card and set its opacity style to 1.
+
+* Also, within the same function, change the border color of the #infoCard element to '2px solid #007bff'.
+
+* Add a mouseenter event listener to the #infoCard element that calls your showInfo function.
+
+**Step 3: `mouseleave` Functionality**
+
+* On the #infoCard element, add a second event listener, this time for the mouseleave event.
+For this event, use an anonymous function directly inside the event listener.
+
+* Inside the anonymous function, set the opacity of the paragraph back to 0.
+
+* Also, within the same function, change the border color back to '2px solid transparent'.
+
+💡 **Hint:**
+
+This is the equivalent of what you achieve with the CSS pseudo-class `:hover`. The advantage of the JavaScript approach is that it gives you much more flexibility and control over what happens (e.g., you can change text, color the background, start animations, or even send data to a server), whereas CSS is limited to style changes.
+
+✔️ **Solution:** 
+* [16 - HTML Code](./event-listeners/16-interactive-card.html)
+* [16 - JS Code](./event-listeners/16-interactive-card.js)
+
+</details>
 
 ---
 
