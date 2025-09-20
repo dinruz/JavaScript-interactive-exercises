@@ -81,8 +81,10 @@ Then, simply open the corresponding .html file in your web browser.
  | 13 | [Simple Night Mode Toggle](#ex-13)|   ✔️   | [13-HTML](/event-listeners/13-simple-night-mode.html) | [13-JS](/event-listeners/13-simple-night-mode.js)| 
  | 14 | [3 Methods w/ Named Functions](#ex-14)|   ✔️   | [14-HTML](/event-listeners/14-named-func.html) | [14-JS](/event-listeners/14-named-func.js)| 
  | 15 | [Event Listener - Anon & Named Function](#ex-15)|   ✔️  | [15-HTML](/event-listeners/15-events-anon-named.html) | [15-JS](/event-listeners/15-events-anon-named.js)| 
-  | 16 | [Interactive card - Hovering](#ex-16)|   ✔️  | [16-HTML](/event-listeners/16-interactive-card.html) | [16-JS](/event-listeners/16-interactive-card.js)| 
-
+ | 16 | [Interactive card - Hovering](#ex-16)|   ✔️  | [16-HTML](/event-listeners/16-interactive-card.html) | [16-JS](/event-listeners/16-interactive-card.js)| 
+  | 17 | [Interactive Topic Gallery](#ex-17)|   ✔️  | [17-HTML](/event-listeners/17-interactive-gallery.html) | [17-JS](/event-listeners/17-interactive-gallery.js)| 
+  | 18 | [Single-Select Topic Gallery](#ex-18)|   ✔️  | [18-HTML](/event-listeners/18-single-gallery.html) | [18-JS](/event-listeners/18-single-gallery.js)| 
+ 
 
 ##  Exercises Details and Instructions 
 
@@ -859,7 +861,6 @@ In your .js file, create the functionality for the div element above.
 
 ---
 
-
 <details id="ex-16">
 <summary><strong>Exercise 16: Interactive Card - Hovering</strong></summary>
 
@@ -952,6 +953,144 @@ This is the equivalent of what you achieve with the CSS pseudo-class `:hover`. T
 ✔️ **Solution:** 
 * [16 - HTML Code](./event-listeners/16-interactive-card.html)
 * [16 - JS Code](./event-listeners/16-interactive-card.js)
+
+</details>
+
+---
+
+<details id="ex-17">
+<summary><strong>Exercise 17: Interactive Gallery</strong></summary>
+
+Create three interactive "topic cards." Clicking on any card will change its appearance, and clicking it again will revert it to its original state.
+
+**Initial Code:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e9ecef;
+            gap: 20px;
+            padding: 20px;
+        }
+        .topic-card {
+            width: 250px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .topic-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .topic-card p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        /* The class you will activate with JavaScript */
+        .topic-card.active {
+            background-color: #d4edda;
+            border-color: #28a745;
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="topic-card">
+        <h3>Web Development</h3>
+        <p>Learn to build interactive pages with HTML, CSS, and JS.</p>
+    </div>
+    <div class="topic-card">
+        <h3>UX/UI Design</h3>
+        <p>Create user interfaces that are intuitive and visually appealing.</p>
+    </div>
+    <div class="topic-card">
+        <h3>E-learning</h3>
+        <p>Design and implement digital educational content.</p>
+    </div>
+</body>
+</html>
+```
+
+**Tasks**
+
+**1. Get the group of elements:**
+
+ In your JavaScript file, get all elements with the class topic-card. The result will be a NodeList, similar to an array.
+
+**2. Iterate through the group: **
+
+Use a forEach loop to go through each element you've retrieved.
+
+** 3. Add an event listener:**
+
+ Inside the forEach loop, add a click event listener to each individual card.
+
+** 4. Toggle the class:**
+ Inside the click event listener function, use this (or the variable name that represents the individual card in the loop) and the classList.toggle('active') method. 
+
+
+✔️ **Solution:** 
+* [17 - HTML Code](./event-listeners/17-interactive-gallery.html)
+* [17 - JS Code](./event-listeners/17-interactive-gallery.js)
+
+</details>
+
+---
+
+---
+
+<details id="ex-18">
+<summary><strong>Exercise 18: Single-Select Topic Gallery</strong></summary>
+
+Modify the JavaScript code from previous exercise. The goal is to make it so that **only one** topic card can be active at a time, similar to a radio button or a multiple-choice quiz. This is a very common and practical pattern for creating interactive web content.
+
+**Initial Code:**
+
+Use the exact same initial code you used for the previous exercise. 
+Your changes will only be in the JavaScript file.
+
+**Tasks**
+
+**1. Get the NodeList: **
+
+Start by getting a reference to all the topic cards using document.querySelectorAll(), just as you did before.
+
+**2. Iterate and Listen:**
+
+ Add a click event listener to each card using a forEach loop.
+
+** 3. Implement the Single-Select Logic: **
+
+This is the new part. Inside the click event handler for a card, you need to add a few lines of code to handle the selection logic.
+
+* First, iterate through all of the cards in the NodeList again.
+
+* Inside this loop, remove the .active class from every single card. This ensures all cards are "turned off" before you select a new one.
+
+* Finally, add the .active class to the specific card that was just clicked. You can use the this keyword or the card variable from your forEach loop to refer to the clicked element.
+
+✔️ **Solution:** 
+* [18 - HTML Code](./event-listeners/18-single-gallery.html)
+* [18 - JS Code](./event-listeners/18-single-gallery.js)
 
 </details>
 
