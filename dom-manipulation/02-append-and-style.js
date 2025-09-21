@@ -6,13 +6,13 @@ const container = document.querySelector("#container");
 
 const lightGreenP = document.createElement("p");
 lightGreenP.style.color = "lightgreen";
-lightGreenP.innerText = "This text is light green.";
+lightGreenP.textContent = "This text is light green.";
 
 // 3. Create a new `<h2>` element with the text "This is an orange heading.", color 'orange'
 
 const orangeH2 = document.createElement("h2");
 orangeH2.style.color =  "orange";
-orangeH2.innerText = "This is an orange heading.";
+orangeH2.textContent = "This is an orange heading.";
 
 // 4. Create a new `<div>` element with '2px solid black' border and a 'lightblue' background color
 
@@ -24,9 +24,9 @@ ligtblueDiv.style.cssText ="border: 2px solid black; backgroundColor: lightblue;
   - a new `<p>` element with the text "And I'm the second!" */
 
 const firstEl = document.createElement("h4");
-firstEl.innerText = "I'm the first element in the new div.";
+firstEl.textContent = "I'm the first element in the new div.";
 const secondEl = document.createElement("p");
-secondEl.innerText = "And I'm the second!";
+secondEl.textContent = "And I'm the second!";
 
 // 6. Append all  elements to the "container" div in the correct order
 

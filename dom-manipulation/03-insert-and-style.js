@@ -7,7 +7,7 @@ const intro = document.querySelector(".intro");
 
 const highlighted = document.createElement("span");
 highlighted.classList.add ("highlight");
-highlighted.innerText ="IMPORTANT: ";
+highlighted.textContent ="IMPORTANT: ";
 container.insertBefore(highlighted,intro);
 
 // 3
@@ -20,7 +20,7 @@ infoBox.setAttribute("id","info-box");
 
 const title = document.createElement("h2");
 title.classList.add("section-title");
-title.innerText = "New Section";
+title.textContent = "New Section";
 infoBox.appendChild(title);
 
 // 5
@@ -28,9 +28,9 @@ infoBox.appendChild(title);
 const list = document.createElement("ul");
 
 const firstLi = document.createElement("li");
-firstLi.innerText = "First item";
+firstLi.textContent = "First item";
 const secondLi = document.createElement("li");
-secondLi.innerText = "Second item";
+secondLi.textContent = "Second item";
 
 list.appendChild(firstLi);
 list.appendChild(secondLi);
