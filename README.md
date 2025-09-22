@@ -84,6 +84,7 @@ Then, simply open the corresponding .html file in your web browser.
  | 16 | [Interactive card - Hovering](#ex-16)|   ✔️  | [16-HTML](/event-listeners/16-interactive-card.html) | [16-JS](/event-listeners/16-interactive-card.js)| 
   | 17 | [Interactive Topic Gallery](#ex-17)|   ✔️  | [17-HTML](/event-listeners/17-interactive-gallery.html) | [17-JS](/event-listeners/17-interactive-gallery.js)| 
   | 18 | [Single-Select Topic Gallery](#ex-18)|   ✔️  | [18-HTML](/event-listeners/18-single-gallery.html) | [18-JS](/event-listeners/18-single-gallery.js)| 
+  | 19 | [Interactive Menu (Delegation)](#ex-19)|   ✔️  | [19-HTML](/event-listeners/19-int-menu.html) | [19-JS](/event-listeners/19-int-menu.js)| 
  
 
 ##  Exercises Details and Instructions 
@@ -1056,7 +1057,6 @@ Use a forEach loop to go through each element you've retrieved.
 
 ---
 
----
 
 <details id="ex-18">
 <summary><strong>Exercise 18: Single-Select Topic Gallery</strong></summary>
@@ -1091,6 +1091,61 @@ This is the new part. Inside the click event handler for a card, you need to add
 ✔️ **Solution:** 
 * [18 - HTML Code](./event-listeners/18-single-gallery.html)
 * [18 - JS Code](./event-listeners/18-single-gallery.js)
+
+</details>
+
+---
+
+<details id="ex-19">
+  <summary><strong>Exercise 19: Interactive Menu (Delegation)</strong></summary>
+
+Write a simple HTML menu with several items. Using the event delegation technique, add a click functionality that will change the background color of only the item that the user clicks on.
+
+**Initial Code**
+
+Create an HTML file with the following code. It's important that the `<ul>` element has an ID.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu</title>
+    <style>
+        body { font-family: sans-serif; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; border: 1px solid #ccc; margin-bottom: 5px; cursor: pointer; }
+        .highlight { background-color: lightblue; }
+    </style>
+</head>
+<body>
+    <h1>My Menu</h1>
+    <ul id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li>Blog</li>
+    </ul>
+</body>
+</html>
+```
+
+**Tasks:**
+
+1. Get the `<ul>` element with the ID.
+
+2. Add a single click event listener to it.
+
+3. Inside the listener, use `event.target` to identify which list item (`<li>`) the user clicked.
+
+4. When an item is clicked, add the highlight CSS class to it using classList.add('highlight'). As a bonus, make sure only one item can be highlighted at a time.
+
+
+✔️ **Solution:** 
+* [19 - HTML Code](./dom-manipulation/19-int-menu.html)
+* [19 - JS Code](./dom-manipulation/19-int-menu.js)
 
 </details>
 
