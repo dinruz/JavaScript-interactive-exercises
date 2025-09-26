@@ -1144,8 +1144,8 @@ Create an HTML file with the following code. It's important that the `<ul>` elem
 
 
 ✔️ **Solution:** 
-* [19 - HTML Code](./dom-manipulation/19-int-menu.html)
-* [19 - JS Code](./dom-manipulation/19-int-menu.js)
+* [19 - HTML Code](./event-listeners/19-int-menu.html)
+* [19 - JS Code](./even-listeners/19-int-menu.js)
 
 </details>
 
